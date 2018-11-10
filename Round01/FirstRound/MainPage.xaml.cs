@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirstRound.Lib;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,12 @@ namespace FirstRound
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ResultBox.Text = "xxx";
+            var xxx = new POS();
         }
     }
 }
