@@ -34,10 +34,16 @@ namespace FirstRound
             var Res = new POS();
             double Amount = Convert.ToDouble(AmountInput.Text);
             double Payment = Convert.ToDouble(PaymentInput.Text);
-            if (Amount == Payment)
+            if (Amount <= 0 || Payment <= 0)
+            {
+                var msg = new MessageDialog("จ่ายเงินติดลบไม่ได้โว้ยยยยยยยยยย");
+                await msg.ShowAsync();
+            }
+            else if (Amount == Payment)
             {
                 ChangeText.Text = "จ่ายพอดี ไม่มีทอน";
-            }else if (Amount > Payment)
+            }
+            else if (Amount > Payment)
             {
                 var msg = new MessageDialog("จ่ายเงินให้มากกว่าราคาสินค้าสิจ๊ะ");
                 await msg.ShowAsync();
