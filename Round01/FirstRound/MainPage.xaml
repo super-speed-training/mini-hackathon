@@ -8,33 +8,50 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Button x:Name="Calculate" Content="Calculate" HorizontalAlignment="Left" Margin="997,102,0,0" VerticalAlignment="Top" Click="Calculate_Click" Height="79" Width="162"/>
-        <TextBox x:Name="InputPrice" HorizontalAlignment="Left" Margin="491,85,0,0" Text="" VerticalAlignment="Top" Width="382" Height="34" PlaceholderText="กรุณากรอกราคาสินค้า"/>
-        <TextBox x:Name="InputCustomerPay" HorizontalAlignment="Left" Margin="491,170,0,0" Text="" VerticalAlignment="Top" Width="382" Height="27" PlaceholderText="กรอกจำนวนเงิน"/>
-        <TextBlock x:Name="countThousand" HorizontalAlignment="Left" Margin="345,350,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="110"/>
-        <TextBlock x:Name="MoneyChange" HorizontalAlignment="Left" Margin="126,277,0,0" Text="Money Change :" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="110"/>
-        <TextBlock x:Name="MoneyChangeResult" HorizontalAlignment="Left" Margin="284,277,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="110"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="126,350,0,0" Text="Bank 1000 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52"/>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="126,430,0,0" Text="Bank 500 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52"/>
-        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="126,510,0,0" Text="Bank 100 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52"/>
-        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="126,590,0,0" Text="Bank 50 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52"/>
-        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Margin="638,350,0,0" Text="Bank 20 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52"/>
-        <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Margin="638,430,0,0" Text="Coin 10 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52"/>
-        <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Margin="638,510,0,0" Text="Coin 5 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52"/>
-        <TextBlock x:Name="textBlock8" HorizontalAlignment="Left" Margin="638,590,0,0" Text="Coin 1 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52"/>
-        <TextBlock x:Name="textBlock9" HorizontalAlignment="Left" Margin="638,670,0,0" Text="Coin stang 25 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52"/>
-        <TextBlock x:Name="textBlock10" HorizontalAlignment="Left" Margin="126,670,0,0" Text="Coin stang 50 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52"/>
-        <TextBlock x:Name="countFiveHundred" HorizontalAlignment="Left" Margin="345,425,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52"/>
-        <TextBlock x:Name="countHundred" HorizontalAlignment="Left" Margin="345,505,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52"/>
-        <TextBlock x:Name="countFifty" HorizontalAlignment="Left" Margin="345,585,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52"/>
-        <TextBlock x:Name="countTwenty" HorizontalAlignment="Left" Margin="886,350,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52"/>
-        <TextBlock x:Name="countTen" HorizontalAlignment="Left" Margin="886,430,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52"/>
-        <TextBlock x:Name="countFive" HorizontalAlignment="Left" Margin="886,510,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52"/>
-        <TextBlock x:Name="countOne" HorizontalAlignment="Left" Margin="886,590,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52"/>
-        <TextBlock x:Name="countFiftyStang" HorizontalAlignment="Left" Margin="345,665,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52"/>
-        <TextBlock x:Name="countTwentyFiveStang" HorizontalAlignment="Left" Margin="886,669,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52"/>
-        <TextBlock x:Name="StatusChange" HorizontalAlignment="Left" Margin="652,780,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="74" Width="151" TextAlignment="Center"/>
+    <Grid Background="White">
+
+        <Rectangle HorizontalAlignment="Left" Height="413" Margin="719,318,0,0" VerticalAlignment="Top" Width="198" Stroke="Black"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="413" Margin="94,316,0,0" VerticalAlignment="Top" Width="198" Stroke="Black"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="82" Margin="92,565,0,0" VerticalAlignment="Top" Width="1325" Stroke="Black"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="415" Margin="90,314,0,0" VerticalAlignment="Top" Width="1329" Stroke="Black"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="87" Margin="92,316,0,0" VerticalAlignment="Top" Width="1329" Stroke="Black"/>
+        <Rectangle HorizontalAlignment="Left" Height="82" Margin="92,401,0,0" VerticalAlignment="Top" Width="1329" Stroke="Black"/>
+        <Rectangle HorizontalAlignment="Left" Height="82" Margin="92,647,0,0" VerticalAlignment="Top" Width="1329" Stroke="Black"/>
+        <Rectangle HorizontalAlignment="Left" Height="82" Margin="92,565,0,0" VerticalAlignment="Top" Width="1329" Stroke="Black"/>
+        <Rectangle HorizontalAlignment="Left" Height="82" Margin="92,483,0,0" VerticalAlignment="Top" Width="1329" Stroke="Black"/>
+
+        <Button x:Name="Calculate" Content="คำนวนเงิน" HorizontalAlignment="Left" Margin="905,85,0,0" VerticalAlignment="Top" Click="Calculate_Click" Height="141" Width="170" FontSize="20"/>
+        <TextBox x:Name="InputPrice" HorizontalAlignment="Left" Margin="491,85,0,0" Text="" VerticalAlignment="Top" Width="382" Height="60" PlaceholderText="กรุณากรอกราคาสินค้า" FontSize="25"/>
+        <TextBox x:Name="InputCustomerPay" HorizontalAlignment="Left" Margin="491,166,0,0" Text="" VerticalAlignment="Top" Width="382" Height="60" PlaceholderText="กรอกจำนวนเงิน" FontSize="25"/>
+        <TextBlock x:Name="countThousand" HorizontalAlignment="Left" Margin="345,350,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="110" FontSize="25"/>
+        <TextBlock x:Name="MoneyChange" HorizontalAlignment="Left" Margin="613,254,0,0" Text="เงินทอน :" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="192" FontSize="25"/>
+        <TextBlock x:Name="MoneyChangeResult" HorizontalAlignment="Left" Margin="720,254,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="199" FontSize="25"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="126,350,0,0" Text="Bank 1000 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52" FontSize="20"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="126,430,0,0" Text="Bank 500 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52" FontSize="20"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="126,510,0,0" Text="Bank 100 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52" FontSize="20"/>
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="126,590,0,0" Text="Bank 50 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52" FontSize="20"/>
+        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Margin="755,350,0,0" Text="Bank 20 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52" FontSize="20"/>
+        <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Margin="755,430,0,0" Text="Coin 10 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52" FontSize="20"/>
+        <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Margin="755,510,0,0" Text="Coin 5 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52" FontSize="20"/>
+        <TextBlock x:Name="textBlock8" HorizontalAlignment="Left" Margin="755,590,0,0" Text="Coin 1 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52" FontSize="20"/>
+        <TextBlock x:Name="textBlock9" HorizontalAlignment="Left" Margin="755,670,0,0" Text="Coin stang 25 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52" FontSize="20"/>
+        <TextBlock x:Name="textBlock10" HorizontalAlignment="Left" Margin="126,670,0,0" Text="Coin stang 50 :" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="52" FontSize="20"/>
+        <TextBlock x:Name="countFiveHundred" HorizontalAlignment="Left" Margin="345,425,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52" FontSize="25"/>
+        <TextBlock x:Name="countHundred" HorizontalAlignment="Left" Margin="345,505,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52" FontSize="25"/>
+        <TextBlock x:Name="countFifty" HorizontalAlignment="Left" Margin="345,585,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52" FontSize="25"/>
+        <TextBlock x:Name="countTwenty" HorizontalAlignment="Left" Margin="1002,350,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52" FontSize="25"/>
+        <TextBlock x:Name="countTen" HorizontalAlignment="Left" Margin="1002,430,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52" FontSize="25"/>
+        <TextBlock x:Name="countFive" HorizontalAlignment="Left" Margin="1002,510,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52" FontSize="25"/>
+        <TextBlock x:Name="countOne" HorizontalAlignment="Left" Margin="1002,590,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52" FontSize="25"/>
+        <TextBlock x:Name="countFiftyStang" HorizontalAlignment="Left" Margin="345,665,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52" FontSize="25"/>
+        <TextBlock x:Name="countTwentyFiveStang" HorizontalAlignment="Left" Margin="1002,669,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="52" FontSize="25"/>
+        <TextBlock x:Name="StatusChange" HorizontalAlignment="Left" Margin="538,778,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="134" Width="429" TextAlignment="Center" FontSize="30"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="257,145,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image Source="http://www.mapolbs.com/images/resource/pos-solutions.png" x:Name="image1" HorizontalAlignment="Left" Height="191" Margin="271,69,0,0" VerticalAlignment="Top" Width="191"/>
 
     </Grid>
 </Page>
