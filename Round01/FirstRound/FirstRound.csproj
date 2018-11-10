@@ -131,6 +131,12 @@
       <Version>6.1.9</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\netcore\FirstRound.Lib\FirstRound.Lib.csproj">
+      <Project>{a3ebbafe-f96b-45b6-892f-10f1fe6600fd}</Project>
+      <Name>FirstRound.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

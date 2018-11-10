@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirstRound.Lib;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,27 @@ namespace FirstRound
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var xx = new VerySimplePOS();
+            var amount = double.Parse(Amount.Text);
+            var pay = double.Parse(Pay.Text);
+            var change = xx.ComputeChange(amount, pay);
+            var result = xx.GetChangeBankNotesAndCoins(change);
+            Change.Text = result.RoundedChange.ToString();
+            int value = 0;
+            if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Thousand, out value)) Thoundsand.Text = value.ToString();
+            if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.FiveHundreds, out value)) FiveHundreds.Text = value.ToString();
+            if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Hundred, out value)) Hundred.Text = value.ToString();
+            if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Fifty, out value)) Fifty.Text = value.ToString();
+            if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Twenty, out value)) Twenty.Text = value.ToString();
+            if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Ten, out value)) Ten.Text = value.ToString();
+            if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Five, out value)) Five.Text = value.ToString();
+            if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.One, out value)) One.Text = value.ToString();
+            if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Fiftieth, out value)) Fiftieth.Text = value.ToString();
+            if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.TwentyFifth, out value)) TwentyFifth.Text = value.ToString();
         }
     }
 }

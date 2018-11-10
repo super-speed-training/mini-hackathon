@@ -8,7 +8,20 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
+    <Grid HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="1500">
+        <TextBox x:Name="Amount" HorizontalAlignment="Left" Margin="524,46,0,0" Text="" VerticalAlignment="Top" Height="80" Width="460"/>
+        <Button Content="Button" HorizontalAlignment="Center" Margin="0,302,0,0" VerticalAlignment="Top" Click="Button_Click" Height="62" Width="261"/>
+        <TextBox x:Name="Pay" HorizontalAlignment="Left" Margin="524,178,0,0" Text="" VerticalAlignment="Top" Height="80" Width="460"/>
+        <TextBox x:Name="Change" HorizontalAlignment="Center" Margin="0,420,0,0" Text="" VerticalAlignment="Top" Height="80" Width="460"/>
+        <TextBox x:Name="Ten" HorizontalAlignment="Left" Margin="100,696,0,0" Text="" VerticalAlignment="Top" Height="80" Width="240"/>
+        <TextBox x:Name="FiveHundreds" HorizontalAlignment="Left" Margin="372,584,0,0" Text="" VerticalAlignment="Top" Height="80" Width="240"/>
+        <TextBox x:Name="Thoundsand" HorizontalAlignment="Left" Margin="100,584,0,0" Text="" VerticalAlignment="Top" Height="80" Width="240"/>
+        <TextBox x:Name="Five" HorizontalAlignment="Left" Margin="372,696,0,0" Text="" VerticalAlignment="Top" Height="80" Width="240"/>
+        <TextBox x:Name="One" HorizontalAlignment="Left" Margin="656,696,0,0" Text="" VerticalAlignment="Top" Height="80" Width="240"/>
+        <TextBox x:Name="Fifty" HorizontalAlignment="Left" Margin="928,584,0,0" Text="" VerticalAlignment="Top" Height="80" Width="240"/>
+        <TextBox x:Name="Hundred" HorizontalAlignment="Left" Margin="656,584,0,0" Text="" VerticalAlignment="Top" Height="80" Width="240"/>
+        <TextBox x:Name="Fiftieth" HorizontalAlignment="Left" Margin="928,696,0,0" Text="" VerticalAlignment="Top" Height="80" Width="240"/>
+        <TextBox x:Name="Twenty" HorizontalAlignment="Left" Margin="1210,584,0,0" Text="" VerticalAlignment="Top" Height="80" Width="240"/>
+        <TextBox x:Name="TwentyFifth" HorizontalAlignment="Left" Margin="1210,696,0,0" Text="" VerticalAlignment="Top" Height="80" Width="240"/>
     </Grid>
 </Page>
