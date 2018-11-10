@@ -55,10 +55,10 @@ namespace FirstRound.Lib
             var change = result.RoundedChange;
             var updateChange = change;
 
-            if (change > 1000)
+            if (updateChange > 1000)
             {
                 var thousandBank = updateChange / 1000;
-                updateChange = change % 1000;
+                updateChange = updateChange % 1000;
                 bankLists.Add(BankNotesAndCoinsInSatang.Thousand, (int)thousandBank);
             }
             if (updateChange >= 500 && updateChange <= 1000)
