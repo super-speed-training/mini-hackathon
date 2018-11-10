@@ -16,10 +16,16 @@ namespace FirstRound.Lib.Tests
 
         [Theory]
         [InlineData(552, 1000, 44800)]
+        [InlineData(552, 1000.50, 44850)]
         [InlineData(175.30, 500, 32475)]
         [InlineData(255.51, 500, 24450)]
+        [InlineData(255.511111, 500, 24450)]
 
         [InlineData(700, 500, 0)]
+        [InlineData(700, -1500, 0)]
+        [InlineData(700.50, -1500.55, 0)]
+
+
         [InlineData(700, -500, 0)]
         [InlineData(-700, -500, 0)]
         public void ComputeChangeInBahtAndSatangCorrectly(double amount, double payment, int expected)
