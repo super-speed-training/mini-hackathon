@@ -10,12 +10,16 @@ namespace FirstRound.Lib.Tests
 
         public VerySimplePosTests()
         {
-            // TODO: instantiate SUT with your implementation of IVerySimplePOS.
+            sut = new VerySimplePOS();
         }
 
         [Theory]
         [InlineData(552, 1000, 44800)]
-        [InlineData(175.30, 500, 32475)]
+        [InlineData(175.20, 500, 32500)] //.8
+        [InlineData(175.30, 500, 32475)] //.7
+        [InlineData(175.40, 500, 32475)] //.6
+        [InlineData(175.50, 500, 32450)] //.5
+        [InlineData(175.80, 500, 32425)] //.2
         public void ComputeChangeInBahtAndSatangCorrectly(double amount, double payment, int expected)
         {
             var result = this.sut.ComputeChange(amount, payment);
@@ -23,7 +27,7 @@ namespace FirstRound.Lib.Tests
             result.Should().Be(expected);
         }
 
-        [Theory]
+        [Theory(DisplayName = "GetChangeBankNotesAndCoinsCases")]
         [MemberData(nameof(GetChangeBankNotesAndCoinsCases))]
         public void GetChangeBankNotesAndCoinsReturnsCorrectSolution(int change, ChangeSolution expected)
         {
