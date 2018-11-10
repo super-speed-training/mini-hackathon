@@ -11,13 +11,13 @@
     <Grid Background="White">
         <Image Source="background.jpg" Margin="-167,0,-137,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FocusVisualPrimaryBrush="Black" Opacity="0.4"/>
 
-        <Button x:Name="ComputeButton" Content="Compute" HorizontalAlignment="Right" Margin="0,45,20,0" VerticalAlignment="Top" Height="93" Width="280" Click="ComputeButton_Click" FontSize="36" FocusVisualPrimaryBrush="Black" Background="#FD616161" Foreground="White" FontWeight="Bold"/>
-        <TextBox x:Name="PaymentTextBox" Margin="360,45,320,0" Text="" VerticalAlignment="Top" PlaceholderText="0" FontFamily="Segoe UI" FontSize="22" Background="White" Foreground="Black" HorizontalAlignment="Stretch"/>
-        <TextBlock HorizontalAlignment="Left" Margin="142,51,0,0" Text="Customer Payment" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="22" FontWeight="Bold" Foreground="Black" TextAlignment="Right"/>
-        <TextBox x:Name="TotalAmountTextBox" Margin="360,96,320,0" Text="" VerticalAlignment="Top" PlaceholderText="0" FontSize="22" Background="White" Foreground="Black" HorizontalAlignment="Stretch"/>
-        <TextBlock HorizontalAlignment="Left" Margin="142,102,0,0" Text="Total Amount" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="22" FontWeight="Bold" Foreground="Black" Width="196" TextAlignment="Right"/>
-        <TextBlock HorizontalAlignment="Left" Margin="142,224,0,0" Text="Balance" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" FontWeight="Bold" Foreground="Black"/>
-        <TextBlock x:Name="BalanceText" HorizontalAlignment="Left" Margin="142,325,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI" Foreground="Black"/>
+        <Button x:Name="ComputeButton" Content="Compute" HorizontalAlignment="Right" Margin="0,45,20,0" VerticalAlignment="Top" Height="93" Width="280" FontSize="36" FocusVisualPrimaryBrush="Black" Background="#FD616161" Foreground="White" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+        <TextBox x:Name="PaymentTextBox" Margin="360,45,320,0" Text="" VerticalAlignment="Top" PlaceholderText="0" FontFamily="Comic Sans MS" FontSize="22" Background="White" Foreground="Black" HorizontalAlignment="Stretch"/>
+        <TextBlock HorizontalAlignment="Left" Margin="142,51,0,0" Text="Customer Payment" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontSize="22" FontWeight="Bold" Foreground="Black" TextAlignment="Right"/>
+        <TextBox x:Name="TotalAmountTextBox" Margin="360,96,320,0" Text="" VerticalAlignment="Top" PlaceholderText="0" FontSize="22" Background="White" Foreground="Black" HorizontalAlignment="Stretch" FontFamily="Comic Sans MS"/>
+        <TextBlock HorizontalAlignment="Left" Margin="142,102,0,0" Text="Total Amount" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontSize="22" FontWeight="Bold" Foreground="Black" Width="196" TextAlignment="Right"/>
+        <TextBlock HorizontalAlignment="Left" Margin="142,224,0,0" Text="Balance" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" FontWeight="Bold" Foreground="Black" FontFamily="Comic Sans MS"/>
+        <TextBlock x:Name="BalanceText" HorizontalAlignment="Left" Margin="142,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" FontFamily="Comic Sans MS" Foreground="Black"/>
         <Rectangle HorizontalAlignment="Stretch" Height="10" Margin="0,190,0,0" VerticalAlignment="Top" Fill="#FFECECEC"/>
 
     </Grid>

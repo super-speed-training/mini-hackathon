@@ -26,9 +26,13 @@ namespace FirstRound
         public MainPage()
         {
             this.InitializeComponent();
-        }
 
-        private void ComputeButton_Click(object sender, RoutedEventArgs e)
+            PaymentTextBox.KeyDown += (sender, e) => { if (e.Key == Windows.System.VirtualKey.Enter) Compute(); };
+            TotalAmountTextBox.KeyDown += (sender, e) => { if (e.Key == Windows.System.VirtualKey.Enter) Compute(); };
+            ComputeButton.Click += (sender, e) => Compute();
+        }
+        
+        private void Compute()
         {
             if (double.TryParse(PaymentTextBox.Text, out double payment) &&
                 double.TryParse(TotalAmountTextBox.Text, out double totalAmount))
@@ -67,16 +71,16 @@ namespace FirstRound
                     resutlInSatang.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.TwentyFifth, out int TwentyFifth);
 
                     displayText = $"RoundedChange: {resutlInSatang.RoundedChange}\n" +
-                        (Thousand > 0 ? $"1000 x {Thousand}\n" : string.Empty) +
-                        (FiveHundreds > 0 ? $"500 x {FiveHundreds}\n" : string.Empty) +
-                        (Hundred > 0 ? $"100 x {Hundred}\n" : string.Empty) +
-                        (Fifty > 0 ? $"50 x {Fifty}\n" : string.Empty) +
-                        (Twenty > 0 ? $"20 x {Twenty}\n" : string.Empty) +
-                        (Ten > 0 ? $"10 x {Ten}\n" : string.Empty) +
-                        (Five > 0 ? $"5 x {Five}\n" : string.Empty) +
-                        (One > 0 ? $"1 x {One}\n" : string.Empty) +
-                        (Fiftieth > 0 ? $"0.50 x {Fiftieth}\n" : string.Empty) +
-                        (TwentyFifth > 0 ? $"0.25 x {TwentyFifth}\n" : string.Empty);
+                        (Thousand > 0 ? $"\t1000 x {Thousand}\n" : string.Empty) +
+                        (FiveHundreds > 0 ? $"\t500 x {FiveHundreds}\n" : string.Empty) +
+                        (Hundred > 0 ? $"\t100 x {Hundred}\n" : string.Empty) +
+                        (Fifty > 0 ? $"\t50 x {Fifty}\n" : string.Empty) +
+                        (Twenty > 0 ? $"\t20 x {Twenty}\n" : string.Empty) +
+                        (Ten > 0 ? $"\t10 x {Ten}\n" : string.Empty) +
+                        (Five > 0 ? $"\t5 x {Five}\n" : string.Empty) +
+                        (One > 0 ? $"\t1 x {One}\n" : string.Empty) +
+                        (Fiftieth > 0 ? $"\t0.50 x {Fiftieth}\n" : string.Empty) +
+                        (TwentyFifth > 0 ? $"\t0.25 x {TwentyFifth}\n" : string.Empty);
                 }
                 BalanceText.Text = displayText;
             }
