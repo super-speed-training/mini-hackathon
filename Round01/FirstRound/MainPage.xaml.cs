@@ -30,8 +30,52 @@ namespace FirstRound
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ResultBox.Text = "xxx";
-            var xxx = new POS();
+            var Res = new POS();
+            double Amount = Convert.ToDouble(AmountInput.Text);
+            double Payment = Convert.ToDouble(PaymentInput.Text);
+            var resuly = Res.ComputeChange(Amount, Payment);
+            var Change = Res.GetChangeBankNotesAndCoins(resuly);
+            ChangeText.Text = Change.RoundedChange.ToString();
+            if (Change.BankNotesAndCoins.ContainsKey(BankNotesAndCoinsInSatang.Thousand))
+            {
+                Thousand.Text = Change.BankNotesAndCoins[BankNotesAndCoinsInSatang.Thousand].ToString();
+            }
+            if (Change.BankNotesAndCoins.ContainsKey(BankNotesAndCoinsInSatang.FiveHundreds))
+            {
+                FiveHundreds.Text = Change.BankNotesAndCoins[BankNotesAndCoinsInSatang.FiveHundreds].ToString();
+            }
+            if (Change.BankNotesAndCoins.ContainsKey(BankNotesAndCoinsInSatang.Hundred))
+            {
+                Hundred.Text = Change.BankNotesAndCoins[BankNotesAndCoinsInSatang.Hundred].ToString();
+            }
+            if (Change.BankNotesAndCoins.ContainsKey(BankNotesAndCoinsInSatang.Fifty))
+            {
+                Fifty.Text = Change.BankNotesAndCoins[BankNotesAndCoinsInSatang.Fifty].ToString();
+            }
+            if (Change.BankNotesAndCoins.ContainsKey(BankNotesAndCoinsInSatang.Twenty))
+            {
+                Twenty.Text = Change.BankNotesAndCoins[BankNotesAndCoinsInSatang.Twenty].ToString();
+            }
+            if (Change.BankNotesAndCoins.ContainsKey(BankNotesAndCoinsInSatang.Ten))
+            {
+                Ten.Text = Change.BankNotesAndCoins[BankNotesAndCoinsInSatang.Ten].ToString();
+            }
+            if (Change.BankNotesAndCoins.ContainsKey(BankNotesAndCoinsInSatang.Five))
+            {
+                Five.Text = Change.BankNotesAndCoins[BankNotesAndCoinsInSatang.Five].ToString();
+            }
+            if (Change.BankNotesAndCoins.ContainsKey(BankNotesAndCoinsInSatang.One))
+            {
+                One.Text = Change.BankNotesAndCoins[BankNotesAndCoinsInSatang.One].ToString();
+            }
+            if (Change.BankNotesAndCoins.ContainsKey(BankNotesAndCoinsInSatang.Fiftieth))
+            {
+                Fiftieth.Text = Change.BankNotesAndCoins[BankNotesAndCoinsInSatang.Fiftieth].ToString();
+            }
+            if (Change.BankNotesAndCoins.ContainsKey(BankNotesAndCoinsInSatang.TwentyFifth))
+            {
+                TwentyFifth.Text = Change.BankNotesAndCoins[BankNotesAndCoinsInSatang.TwentyFifth].ToString();
+            }
         }
     }
 }

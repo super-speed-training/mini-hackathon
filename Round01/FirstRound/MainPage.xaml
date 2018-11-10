@@ -9,9 +9,40 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <TextBlock x:Name="ResultBox" HorizontalAlignment="Left" Margin="10,68,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox x:Name="Inputbox" HorizontalAlignment="Left" Text="TextBox" VerticalAlignment="Top" Margin="87,11,0,0" Width="228"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="331,11,0,0" VerticalAlignment="Top" Click="Button_Click" Height="336" Width="299">
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/money.png"/>
+            </Button.Background>
+            <Button.Foreground>
+                <ImageBrush ImageSource="Assets/SplashScreen.png"/>
+            </Button.Foreground>
+        </Button>
+        <TextBlock x:Name="ResultBox" HorizontalAlignment="Left" Margin="11,129,0,0" Text="1000 :" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="88" FocusVisualPrimaryBrush="#FFF70606"/>
+        <TextBox x:Name="AmountInput" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Margin="88,11,0,0" Width="228" PlaceholderText="ราคาสินค้า"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,17,0,0" Text="Amount" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,53,0,0" Text="Payment" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="PaymentInput" HorizontalAlignment="Left" Margin="87,48,0,0" Text="" VerticalAlignment="Top" Height="25" Width="228" PlaceholderText="จำนวนเงิน"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,93,0,0" Text="Change" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ChangeText" HorizontalAlignment="Left" Margin="87,93,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="228"/>
+        <TextBlock x:Name="Thousand" HorizontalAlignment="Left" Margin="88,129,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFF70606"/>
+        <TextBlock x:Name="ResultBox_Copy" HorizontalAlignment="Left" Margin="11,154,0,0" Text=" 500 :" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="88"/>
+        <TextBlock x:Name="FiveHundreds" HorizontalAlignment="Left" Margin="88,154,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ResultBox_Copy1" HorizontalAlignment="Left" Margin="10,174,0,0" Text=" 100 :" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="88"/>
+        <TextBlock x:Name="Hundred" HorizontalAlignment="Left" Margin="87,174,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ResultBox_Copy2" HorizontalAlignment="Left" Margin="11,194,0,0" Text="  50 :" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="88"/>
+        <TextBlock x:Name="Fifty" HorizontalAlignment="Left" Margin="88,194,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ResultBox_Copy3" HorizontalAlignment="Left" Margin="10,219,0,0" Text="  20 :" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="88"/>
+        <TextBlock x:Name="Twenty" HorizontalAlignment="Left" Margin="87,219,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ResultBox_Copy4" HorizontalAlignment="Left" Margin="11,239,0,0" Text="  10 :" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="88"/>
+        <TextBlock x:Name="Ten" HorizontalAlignment="Left" Margin="88,239,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ResultBox_Copy5" HorizontalAlignment="Left" Margin="10,259,0,0" Text="   5 :" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="88"/>
+        <TextBlock x:Name="Five" HorizontalAlignment="Left" Margin="87,259,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ResultBox_Copy6" HorizontalAlignment="Left" Margin="10,284,0,0" Text="   1 :" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="88"/>
+        <TextBlock x:Name="One" HorizontalAlignment="Left" Margin="87,284,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ResultBox_Copy7" HorizontalAlignment="Left" Margin="10,304,0,0" Text="0.5 :" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="88"/>
+        <TextBlock x:Name="Fiftieth" HorizontalAlignment="Left" Margin="87,304,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ResultBox_Copy8" HorizontalAlignment="Left" Margin="10,324,0,0" Text="0.25:" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="88"/>
+        <TextBlock x:Name="TwentyFifth" HorizontalAlignment="Left" Margin="87,324,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>
