@@ -33,21 +33,21 @@ namespace FirstRound
                 var change = ui.ComputeChange(amount, pay);
                 var result = ui.GetChangeBankNotesAndCoins(change);
 
-                Change.Text = result.RoundedChange.ToString();
+                Change.Text = result.RoundedChange.ToString("0.00");
                 int value = 0;
 
                 ResultGrid.Visibility = Visibility.Visible;
 
-                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Thousand, out value)) Thoundsand.Text = value.ToString();
-                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.FiveHundreds, out value)) FiveHundreds.Text = value.ToString();
-                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Hundred, out value)) Hundred.Text = value.ToString();
-                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Fifty, out value)) Fifty.Text = value.ToString();
-                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Twenty, out value)) Twenty.Text = value.ToString();
-                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Ten, out value)) Ten.Text = value.ToString();
-                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Five, out value)) Five.Text = value.ToString();
-                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.One, out value)) One.Text = value.ToString();
-                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Fiftieth, out value)) Fiftieth.Text = value.ToString();
-                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.TwentyFifth, out value)) TwentyFifth.Text = value.ToString();
+                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Thousand, out value)) Thoundsand.Text = value.ToString("0.00");
+                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.FiveHundreds, out value)) FiveHundreds.Text = value.ToString("0.00");
+                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Hundred, out value)) Hundred.Text = value.ToString("0.00");
+                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Fifty, out value)) Fifty.Text = value.ToString("0.00");
+                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Twenty, out value)) Twenty.Text = value.ToString("0.00");
+                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Ten, out value)) Ten.Text = value.ToString("0.00");
+                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Five, out value)) Five.Text = value.ToString("0.00");
+                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.One, out value)) One.Text = value.ToString("0.00");
+                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.Fiftieth, out value)) Fiftieth.Text = value.ToString("0.00");
+                if (result.BankNotesAndCoins.TryGetValue(BankNotesAndCoinsInSatang.TwentyFifth, out value)) TwentyFifth.Text = value.ToString("0.00");
             }
             else
             {
