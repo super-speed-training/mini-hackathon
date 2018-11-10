@@ -23,7 +23,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="10,53,0,0" Text="Payment" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox x:Name="PaymentInput" HorizontalAlignment="Left" Margin="87,48,0,0" Text="" VerticalAlignment="Top" Height="25" Width="228" PlaceholderText="จำนวนเงิน"/>
         <TextBlock HorizontalAlignment="Left" Margin="11,93,0,0" Text="Change" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock x:Name="ChangeText" HorizontalAlignment="Left" Margin="87,93,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="228"/>
+        <TextBlock x:Name="ChangeText" HorizontalAlignment="Left" Margin="87,93,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="228"/>
         <TextBlock x:Name="Thousand" HorizontalAlignment="Left" Margin="88,129,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="#FFF70606"/>
         <TextBlock x:Name="ResultBox_Copy" HorizontalAlignment="Left" Margin="11,154,0,0" Text=" 500 :" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="88"/>
         <TextBlock x:Name="FiveHundreds" HorizontalAlignment="Left" Margin="88,154,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top"/>
