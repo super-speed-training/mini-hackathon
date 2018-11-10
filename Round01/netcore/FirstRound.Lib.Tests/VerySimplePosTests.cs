@@ -11,11 +11,15 @@ namespace FirstRound.Lib.Tests
         public VerySimplePosTests()
         {
             // TODO: instantiate SUT with your implementation of IVerySimplePOS.
+            sut = new POS();
+            
         }
 
         [Theory]
         [InlineData(552, 1000, 44800)]
         [InlineData(175.30, 500, 32475)]
+        [InlineData(175.49, 500, 32475)]
+        [InlineData(175.89, 500, 32425)]
         public void ComputeChangeInBahtAndSatangCorrectly(double amount, double payment, int expected)
         {
             var result = this.sut.ComputeChange(amount, payment);
