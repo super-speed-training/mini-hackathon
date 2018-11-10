@@ -6,8 +6,12 @@ namespace FirstRound.Lib
 {
     public class VerySimplePOS : IVerySimplePOS
     {
+        private const int MinimumAmount = 0;
+
         public int ComputeChange(double totalAmount, double customerPayment)
         {
+            var isValidate = totalAmount > MinimumAmount && customerPayment >= totalAmount;
+            if (!isValidate) return MinimumAmount;
 
             var result = customerPayment - totalAmount;
             var x = result % 1;
@@ -42,8 +46,14 @@ namespace FirstRound.Lib
 
         public ChangeSolution GetChangeBankNotesAndCoins(int changeInSatang)
         {
-            var result = new ChangeSolution() { BankNotesAndCoins = new Dictionary<BankNotesAndCoinsInSatang, int>() };
-            result.HasChange = true;
+            var isValidate = changeInSatang > MinimumAmount;
+            if (!isValidate) return new ChangeSolution { HasChange = false };
+
+            var result = new ChangeSolution()
+            {
+                HasChange = true,
+                BankNotesAndCoins = new Dictionary<BankNotesAndCoinsInSatang, int>()
+            };
             var amount = 0;
             result.RoundedChange = ((double)changeInSatang / 100);
             var sut = result.RoundedChange;

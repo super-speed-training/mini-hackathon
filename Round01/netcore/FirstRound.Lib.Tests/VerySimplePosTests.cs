@@ -13,7 +13,12 @@ namespace FirstRound.Lib.Tests
             sut = new VerySimplePOS();
         }
 
-        [Theory]
+        [Theory(DisplayName = "Verify ComputeChange function successed.")]
+        [InlineData(0, 0, 0)]
+        [InlineData(-1, 5, 0)]
+        [InlineData(50, -50, 0)]
+        [InlineData(-50, -50, 0)]
+        [InlineData(500, 50, 0)]
         [InlineData(552, 1000, 44800)]
         [InlineData(175.20, 500, 32500)] //.8
         [InlineData(175.30, 500, 32475)] //.7
@@ -27,7 +32,7 @@ namespace FirstRound.Lib.Tests
             result.Should().Be(expected);
         }
 
-        [Theory(DisplayName = "GetChangeBankNotesAndCoinsCases")]
+        [Theory(DisplayName = "Verify GetChangeBankNotesAndCoins function successed.")]
         [MemberData(nameof(GetChangeBankNotesAndCoinsCases))]
         public void GetChangeBankNotesAndCoinsReturnsCorrectSolution(int change, ChangeSolution expected)
         {
@@ -38,6 +43,20 @@ namespace FirstRound.Lib.Tests
 
         public static IEnumerable<object[]> GetChangeBankNotesAndCoinsCases = new List<object[]>
         {
+            new object[] { -1,
+                new ChangeSolution
+                {
+                    HasChange = false,
+                    BankNotesAndCoins = null
+                },
+            },
+            new object[] { 0,
+                new ChangeSolution
+                {
+                    HasChange = false,
+                    BankNotesAndCoins = null
+                },
+            },
             new object[] { 44800,
                 new ChangeSolution
                 {
