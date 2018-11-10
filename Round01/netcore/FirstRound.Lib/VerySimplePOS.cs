@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace FirstRound.Lib
 {
@@ -8,29 +7,37 @@ namespace FirstRound.Lib
     {
         public int ComputeChange(double totalAmount, double customerPayment)
         {
-            var result = (customerPayment - totalAmount);
-            int result2 = (int)(customerPayment - totalAmount);
-            var stang = (result - result2) * 100;
             int resultFinal = 0;
-
-            if (stang % 25 == 0)
+            if (totalAmount >= 0 && customerPayment >= 0 && customerPayment >= totalAmount)
             {
-                resultFinal = (int)(result * 100);
-            }
-            else {
-                if (stang > 0 && stang < 25) {
-                    resultFinal = (result2 * 100) + 25;
-                }
-                if(stang > 25 && stang < 50)
+                var result = (customerPayment - totalAmount);
+                int result2 = (int)(customerPayment - totalAmount);
+                var stang = (result - result2) * 100;
+                
+
+                if (stang % 25 == 0)
                 {
-                    resultFinal = (result2 * 100) + 50; 
+                    resultFinal = (int)(result * 100);
                 }
-                if (stang > 50 && stang < 75) {
-                    resultFinal = (result2 * 100) + 75;
+                else
+                {
+                    if (stang > 0 && stang < 25)
+                    {
+                        resultFinal = (result2 * 100) + 25;
+                    }
+                    if (stang > 25 && stang < 50)
+                    {
+                        resultFinal = (result2 * 100) + 50;
+                    }
+                    if (stang > 50 && stang < 75)
+                    {
+                        resultFinal = (result2 * 100) + 75;
+                    }
+                    if (stang > 75 && stang < 100)
+                    {
+                        resultFinal = (result2 * 100) + 100;
+                    }
                 }
-                if (stang > 75 && stang < 100) {
-                    resultFinal = (result2 * 100) + 100;
-                } 
             }
             return resultFinal;
         }
@@ -54,14 +61,15 @@ namespace FirstRound.Lib
             int count25StangCoin = 0;
             int count50StangCoin = 0;
 
-            stang = changeInSatang - ((changeInSatang / 100)*100);
+            stang = changeInSatang - ((changeInSatang / 100) * 100);
             resultStang = stang;
 
-            if (changeInSatang > 0) {
-           
+            if (changeInSatang > 0)
+            {
+
                 posCalculator.HasChange = true;
                 posCalculator.RoundedChange = Convert.ToDouble(changeInSatang) / 100;
-                
+
                 money = changeInSatang / 100;
                 result = money;
                 if (result >= 1000)
@@ -82,7 +90,7 @@ namespace FirstRound.Lib
                     result = result - (countOneHundredBank * 100);
                     posCalculator.BankNotesAndCoins.Add(BankNotesAndCoinsInSatang.Hundred, countOneHundredBank);
                 }
-                if(result >= 50)
+                if (result >= 50)
                 {
                     countFiftyBank = result / 50;
                     result = result - (countFiftyBank * 50);
@@ -112,20 +120,22 @@ namespace FirstRound.Lib
                     countOneCoin = result / 1;
                     posCalculator.BankNotesAndCoins.Add(BankNotesAndCoinsInSatang.One, countOneCoin);
                 }
-                if (resultStang >= 50) {
+                if (resultStang >= 50)
+                {
                     count50StangCoin = resultStang / 50;
                     resultStang = resultStang - (count50StangCoin * 50);
                     posCalculator.BankNotesAndCoins.Add(BankNotesAndCoinsInSatang.Fiftieth, count50StangCoin);
                 }
-                if (resultStang >= 25) {
+                if (resultStang >= 25)
+                {
                     count25StangCoin = resultStang / 25;
                     posCalculator.BankNotesAndCoins.Add(BankNotesAndCoinsInSatang.TwentyFifth, count25StangCoin);
                 }
 
             }
             return posCalculator;
-         
-         
+
+
         }
     }
 }
