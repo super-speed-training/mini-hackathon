@@ -9,3 +9,9 @@
 * Implement SecondRound.Lib. Added SecondRound.Lib.Tests yourself if you need it.
 * Use those implementation in the SecondRound app.
 * Deploy and run the SecondRound app on Raspberry Pi.
+
+## References
+
+* [SenseHat NuGet package](https://www.nuget.org/packages/Emmellsoft.IoT.RPi.SenseHat/)
+* [SenseHat Product Page](https://www.raspberrypi.org/products/sense-hat/)
+* [Quickstart: Send telemetry from a device to an IoT hub (C#)](https://docs.microsoft.com/en-us/azure/iot-hub/quickstart-send-telemetry-dotnet)
