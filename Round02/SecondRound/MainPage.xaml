@@ -6,9 +6,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" FontFamily="Segoe UI" Height="880" Width="1075">
 
     <Grid>
-
+        <TextBlock x:Name="DisplayTemp" HorizontalAlignment="Left" Margin="313,469,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="155" Width="502" FontSize="72" RenderTransformOrigin="0.467,0.523"/>
     </Grid>
 </Page>
