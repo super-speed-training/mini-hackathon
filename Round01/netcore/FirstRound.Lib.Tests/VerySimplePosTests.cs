@@ -11,11 +11,17 @@ namespace FirstRound.Lib.Tests
         public VerySimplePosTests()
         {
             // TODO: instantiate SUT with your implementation of IVerySimplePOS.
+            sut = new POS();
+
         }
 
         [Theory]
         [InlineData(552, 1000, 44800)]
         [InlineData(175.30, 500, 32475)]
+        [InlineData(175.49, 500, 32475)]
+        [InlineData(175.89, 500, 32425)]
+        [InlineData(199.99, 500, 30025)]
+        [InlineData(199.99, 500, 30025)]
         public void ComputeChangeInBahtAndSatangCorrectly(double amount, double payment, int expected)
         {
             var result = this.sut.ComputeChange(amount, payment);
@@ -60,6 +66,39 @@ namespace FirstRound.Lib.Tests
                         { BankNotesAndCoinsInSatang.One, 4 },
                         { BankNotesAndCoinsInSatang.Fiftieth, 1 },
                         { BankNotesAndCoinsInSatang.TwentyFifth, 1 },
+                    },
+                },
+            },
+            new object[] { 48325,
+                new ChangeSolution
+                {
+                    HasChange = true,
+                    RoundedChange = 483.25,
+                    BankNotesAndCoins = new Dictionary<BankNotesAndCoinsInSatang, int>
+                    {
+                        { BankNotesAndCoinsInSatang.Hundred, 4 },
+                        { BankNotesAndCoinsInSatang.Fifty, 1 },
+                        { BankNotesAndCoinsInSatang.Twenty, 1 },
+                        { BankNotesAndCoinsInSatang.Ten, 1 },
+                        { BankNotesAndCoinsInSatang.One, 3 },
+                        { BankNotesAndCoinsInSatang.TwentyFifth, 1 },
+                    },
+                },
+            },
+            new object[] { 87950,
+                new ChangeSolution
+                {
+                    HasChange = true,
+                    RoundedChange = 879.50,
+                    BankNotesAndCoins = new Dictionary<BankNotesAndCoinsInSatang, int>
+                    {
+                        { BankNotesAndCoinsInSatang.FiveHundreds, 1 },
+                        { BankNotesAndCoinsInSatang.Hundred, 3 },
+                        { BankNotesAndCoinsInSatang.Fifty, 1 },
+                        { BankNotesAndCoinsInSatang.Twenty, 1 },
+                        { BankNotesAndCoinsInSatang.Five, 1 },
+                        { BankNotesAndCoinsInSatang.One, 4 },
+                        { BankNotesAndCoinsInSatang.Fiftieth, 1 },
                     },
                 },
             },
